@@ -1,0 +1,28 @@
+{
+  "name": "makan-bot",
+  "version": "1.0.0",
+  "description": "The ultimate makan advisor!",
+  "main": "app.js",
+  "directories": {
+    "example": "examples"
+  },
+  "dependencies": {
+    "botkit": "^0.6.6",
+    "bunyan": "^1.8.5",
+    "cors": "^2.8.4",
+    "csv-parse": "^1.1.7",
+    "elasticsearch": "^12.1.0",
+    "express": "^4.16.2",
+    "firebase-admin": "^5.5.0",
+    "firebase-functions": "^0.7.3",
+    "node-wit": "^4.3.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Wei Yih Cheong <cheongwy@gmail.com> (https://github.com/cheongwy)",
+  "license": "ISC"
+}

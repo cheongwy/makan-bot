@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome to Makan Advisor</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/3.6.3/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+    // Initialize Firebase
+      var config = {
+          apiKey: "AIzaSyDbmC7tg_efU501YK16G_Pr5jWJF8PQ2y4",
+          authDomain: "makan-bot.firebaseapp.com",
+          databaseURL: "https://makan-bot.firebaseio.com",
+          storageBucket: "makan-bot.appspot.com",
+          messagingSenderId: "422270033365"
+      };
+      firebase.initializeApp(config);
+    </script>
+  </head>
+  <body>
+    <div class="message">
+      <h1>A simple chatbot demo for finding delicious food.</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="panel panel-primary">
+                    <div class="panel-heading" id="accordion">
+                        <span class="glyphicon glyphicon-comment"></span>
+                        The Michelin Bib Gourmand Finder for Singapore
+                        <!--
+                        <div class="btn-group pull-right">
+                            <a type="button" class="btn btn-default btn-xs" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                <span class="glyphicon glyphicon-chevron-down"></span>
+                            </a>
+                        </div>
+                      -->
+                    </div>
+                <div class="panel-collapse" id="collapseOne">
+                    <div class="panel-body">
+                        <ul id="chat-list" class="chat">
+                            <li class="left clearfix">
+                              <span class="chat-img pull-left">
+                                <img src="img/ma.png" alt="User Avatar" class="img-circle" />
+                              </span>
+                                <div class="chat-body clearfix">
+                                    <div class="header">
+                                        <strong class="primary-font">Bot</strong>
+                                        <small class="pull-right text-muted">
+                                            <span class="glyphicon glyphicon-time"></span>
+                                        </small>
+                                    </div>
+                                    <p>Feeling hungry? Tell me what you feel like eating today and I'll give you my recommendation (laksa, chicken rice, fishball nooodles, etc).</p>
+                                </div>
+                            </li>
+                        </ul>
+                      <div class="typing-indicator">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>                        
+                    </div>
+                    <div class="panel-footer">
+                        <div class="input-group">
+                            <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..." />
+                            <span class="input-group-btn">
+                                <button id="btn-chat" class="btn btn-warning btn-sm">Send</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="message">
+      <h4>Credits</h4>
+      <ul>
+        <li>Frontend hosting: <a target="_blank" href="https://firebase.google.com">Firebase</a></li>
+        <li>Functions hosting: <a target="_blank" href="https://webtask.io">Firebase</a></li>
+        <li>Elastic search: <a target="_blank" href="https://bonsai.io">bonsai.io</a></li>
+        <li>NLP parser: <a target="_blank" href="https://wit.ai">wit.ai</a></li>
+        <li>Data curated from <a target="_blank" href="bib_gourmand.csv">Michelin Bib Gourmand</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
